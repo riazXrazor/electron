@@ -13,8 +13,8 @@ const path = require('path')
 const readline = require('readline')
 const releaseNotesGenerator = require('./release-notes/index.js')
 const { getCurrentBranch } = require('./lib/utils.js')
-const versionType = args._[0]
-const targetRepo = versionType === 'nightly' ? 'nightlies' : 'electron'
+const bumpType = args._[0]
+const targetRepo = bumpType === 'nightly' ? 'nightlies' : 'electron'
 
 require('colors')
 const pass = '\u2713'.green
